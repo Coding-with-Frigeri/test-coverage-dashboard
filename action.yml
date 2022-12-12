@@ -1,5 +1,5 @@
-name: 'Test Coverage Dashboard'
-description: 'Read current JSON file for the Test Coverage Dashboard from s3 and update with the new version, uploading to s3 again'
+name: 'Hello World'
+description: 'Greet someone and record the time'
 inputs:
   who-to-greet:  # id of input
     description: 'Who to greet'
@@ -10,4 +10,4 @@ outputs:
     description: 'The time we greeted you'
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'app/index.ts'
