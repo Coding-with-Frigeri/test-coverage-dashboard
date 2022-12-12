@@ -1,0 +1,13 @@
+name: 'Test Coverage Dashboard'
+description: 'Read current JSON file for the Test Coverage Dashboard from s3 and update with the new version, uploading to s3 again'
+inputs:
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'node16'
+  main: 'index.js'
