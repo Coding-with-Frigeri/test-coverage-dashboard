@@ -6,7 +6,6 @@ on:
 jobs:
   hello_world_job:
     if: ${{ !contains(github.event.head_commit.message, 'merge:') }}
-    runs-on: ubuntu-latest
     name: A job to say hello
     steps:
       - name: Hello world action step
