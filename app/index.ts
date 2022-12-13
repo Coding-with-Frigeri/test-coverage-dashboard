@@ -1,6 +1,6 @@
 const core = require('@actions/core')
 // const github = require('@actions/github')
-import * as fs from 'fs'
+const fs = require('fs')
 
 const runTestCoverageDashboard = async () => {
   try {
