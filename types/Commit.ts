@@ -1,12 +1,4 @@
-export type Commit = {
-  id: string //hash
-  author: Author
-  message: string
-  url: string
-  timestamp: string
-}
-
-type Author = {
+export type Author = {
   email: string
   name: string
   username: string
