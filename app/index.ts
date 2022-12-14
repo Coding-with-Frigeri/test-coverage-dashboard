@@ -14,9 +14,7 @@ const execCommandLine = (command: string) =>
   execSync(command, { cwd: __dirname }).toString()
 
 const filesChanged = (hash: string) => {
-  const response = execCommandLine(
-    `git diff --name-only ${hash}^ ${hash}`
-  ).split('\n')
+  const response = execCommandLine(`git diff --name-only ${hash}^`).split('\n')
 
   return response.filter(Boolean)
 }
