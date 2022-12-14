@@ -23,7 +23,7 @@ jobs:
         run: npm run build
       - name: Hello world action step
         id: hello
-        uses: Coding-with-Frigeri/test-coverage-dashboard@master
+        uses: ./
         with:
           who-to-greet: 'Mona the Octocat'
       - name: Adding a new file for testing purposes
