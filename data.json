@@ -1,1 +1,13 @@
-[{"id":"12dd5056f64a791d0ca0fc19daf29f72b6ae1471","author":{"email":"bpiraja97@gmail.com","name":"Bruno Frigeri","username":"brunofrigeri"},"message":"feat: testing the pipeline","url":"https://github.com/Coding-with-Frigeri/test-coverage-dashboard/commit/12dd5056f64a791d0ca0fc19daf29f72b6ae1471","timestamp":"2022-12-14T13:42:48-03:00"}]
+[
+    {
+        "id": "12dd5056f64a791d0ca0fc19daf29f72b6ae1471",
+        "author": {
+            "email": "bpiraja97@gmail.com",
+            "name": "Bruno Frigeri",
+            "username": "brunofrigeri"
+        },
+        "message": "feat: testing the pipeline",
+        "url": "https://github.com/Coding-with-Frigeri/test-coverage-dashboard/commit/12dd5056f64a791d0ca0fc19daf29f72b6ae1471",
+        "timestamp": "2022-12-14T13:42:48-03:00"
+    }
+]
