@@ -21,8 +21,8 @@ jobs:
         run: npm i
       - name: Build
         run: npm run build
-      - name: Hello world action step
-        id: hello
+      - name: Try to run action.yml
+        id: run
         uses: ./
       - name: Adding a new file for testing purposes
         uses: EndBug/add-and-commit@v9
