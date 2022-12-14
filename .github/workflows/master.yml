@@ -28,4 +28,4 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           add: './data.json'
-          message: 'merge: add new file to the project'
+          message: 'merge: update data.json file by overwriting it'
