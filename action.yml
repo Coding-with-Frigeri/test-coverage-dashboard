@@ -1,4 +1,5 @@
 name: 'Hello World'
+author: "Bruno Frigeri"
 description: 'Greet someone and record the time'
 inputs:
   who-to-greet:  # id of input
@@ -10,4 +11,4 @@ outputs:
     description: 'The time we greeted you'
 runs:
   using: 'node16'
-  main: 'ts-node app/index.ts'
+  main: 'dist/index.js'
