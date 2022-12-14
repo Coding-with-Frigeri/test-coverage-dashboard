@@ -2,8 +2,6 @@ import * as github from '@actions/github'
 import * as core from '@actions/core'
 import * as fs from 'fs'
 
-// import { Commit } from '../types/Commit'
-
 const runTestCoverageDashboard = async () => {
   try {
     const oldData = fs.readFileSync('data.json', 'utf-8')
@@ -15,7 +13,7 @@ const runTestCoverageDashboard = async () => {
     //   console.log('SAVED!!!!')
     // })
   } catch (err) {
-    core.setFailed(err.message)
+    core.setFailed((err as { message: string }).message)
   }
   // const response = fs.readFileSync('data.json', 'utf-8')
 

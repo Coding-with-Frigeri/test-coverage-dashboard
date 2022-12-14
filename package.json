@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "start": "ts-node app/index.ts",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "build": "tsc -p tsconfig.build.json"
   },
   "dependencies": {
     "@actions/core": "^1.10.0",
