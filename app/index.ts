@@ -1,13 +1,19 @@
+const github = require('@actions/github')
 const core = require('@actions/core')
-// const github = require('@actions/github')
 const fs = require('fs')
+
+import { Commit } from '../types/Commit'
 
 const runTestCoverageDashboard = async () => {
   try {
-    fs.writeFile('test.json', '[]', (err) => {
-      if (err) throw err
-      console.log('SAVED!!!!')
-    })
+    const oldData = fs.readFileSync('data.json', 'utf-8')
+
+    const head_commit: Commit = github.context.head_commit
+    console.log(oldData, head_commit)
+    // fs.writeFile('test.json', '[]', (err) => {
+    //   if (err) throw err
+    //   console.log('SAVED!!!!')
+    // })
   } catch (err) {
     core.setFailed(err.message)
   }
