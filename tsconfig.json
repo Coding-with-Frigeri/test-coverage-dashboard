@@ -1,10 +1,10 @@
 {
     "compilerOptions": {
-        "lib": ["ES2022"],
-        "target": "es2022",
+        "lib": ["ES5", "ES6"],
+        "target": "ES5",
         "moduleResolution": "node",
         "esModuleInterop": true,
-        "module": "CommonJS",
+        "module": "ES6",
         "strict": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
