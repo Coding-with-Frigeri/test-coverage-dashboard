@@ -27,5 +27,5 @@ jobs:
       - name: Adding a new file for testing purposes
         uses: EndBug/add-and-commit@v9
         with:
-          add: './test.json'
+          add: './data.json'
           message: 'merge: add new file to the project'
