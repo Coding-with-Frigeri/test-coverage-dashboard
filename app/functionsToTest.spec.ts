@@ -1,6 +1,6 @@
 import { sum, sub, mul, div, mod } from './functionsToTest'
 
-describe.skip('Functions to Test', () => {
+describe('Functions to Test', () => {
   const [a, b] = [10, 20]
   it('should be able to sum two values', () => {
     const response = sum(a, b)
