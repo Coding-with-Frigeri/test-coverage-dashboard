@@ -36,7 +36,6 @@ const runTestCoverageDashboard = async () => {
 
     const files = filesChanged(hash)
 
-    console.log(isAnySpecFilesTouched(files))
     if (isAnySpecFilesTouched(files)) {
       const oldData = fs.readFileSync('data.json', 'utf-8')
 
