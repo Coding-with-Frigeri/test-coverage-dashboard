@@ -24,8 +24,6 @@ jobs:
       - name: Hello world action step
         id: hello
         uses: ./
-        with:
-          who-to-greet: 'Mona the Octocat'
       - name: Adding a new file for testing purposes
         uses: EndBug/add-and-commit@v9
         with:
