@@ -23,6 +23,8 @@ jobs:
         run: npm i
       - name: Build
         run: npm run build
+      - name: Run Test Coverage
+        run: npm run test
       - name: Try to run action.yml
         id: run
         uses: ./

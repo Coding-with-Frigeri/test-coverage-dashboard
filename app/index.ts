@@ -5,6 +5,7 @@ import { dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { Data } from '../types/Data'
 import { execSync } from 'child_process'
+import { CoverageSummary } from '../types/Coverage'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -37,8 +38,13 @@ const runTestCoverageDashboard = async () => {
 
     if (isAnySpecFilesTouched(files)) {
       const oldData = fs.readFileSync('data.json', 'utf-8')
+      const coverageSummary = fs.readFileSync(
+        'coverage/coverage-summary.json',
+        'utf-8'
+      )
 
       const parsedOldData: Data[] = JSON.parse(oldData)
+      const parsedCoverageSummary: CoverageSummary = JSON.parse(coverageSummary)
 
       parsedOldData.unshift({
         id: hash,
@@ -46,6 +52,9 @@ const runTestCoverageDashboard = async () => {
         message,
         url,
         timestamp,
+        coverageSummary: {
+          total: parsedCoverageSummary['total'],
+        },
       })
 
       fs.writeFileSync('data.json', JSON.stringify(parsedOldData))

@@ -1,4 +1,5 @@
 import { Author } from './Commit'
+import { CoverageSummary } from './Coverage'
 
 export type Data = {
   id: string
@@ -6,4 +7,5 @@ export type Data = {
   message: string
   url: string
   timestamp: string
+  coverageSummary: Pick<CoverageSummary, 'total'>
 }
