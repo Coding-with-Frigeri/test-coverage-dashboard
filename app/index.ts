@@ -38,8 +38,13 @@ const runTestCoverageDashboard = async () => {
 
     if (isAnySpecFilesTouched(files)) {
       const oldData = fs.readFileSync('data.json', 'utf-8')
+      const coverageSummary = fs.readFileSync(
+        'coverage/coverage-summary.json',
+        'utf-8'
+      )
 
       const parsedOldData: Data[] = JSON.parse(oldData)
+      const parsedCoverageSummary = JSON.parse(coverageSummary)
 
       parsedOldData.unshift({
         id: hash,
@@ -47,6 +52,7 @@ const runTestCoverageDashboard = async () => {
         message,
         url,
         timestamp,
+        coverageSummary: parsedCoverageSummary,
       })
 
       fs.writeFileSync('data.json', JSON.stringify(parsedOldData))
