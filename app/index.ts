@@ -3,7 +3,6 @@ import * as core from '@actions/core'
 import * as fs from 'fs'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
-
 import { Data } from '../types/Data'
 import { execSync } from 'child_process'
 
