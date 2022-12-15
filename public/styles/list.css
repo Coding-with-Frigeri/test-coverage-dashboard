@@ -1,0 +1,13 @@
+ul {
+    padding-inline-start: 0px;
+    padding: 20px;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid black;
+}
