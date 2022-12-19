@@ -33,4 +33,4 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           add: '.'
-          message: 'merge: update data.json file by overwriting it'
+          message: 'merge: update data.json and coverage files by overwriting it'
