@@ -13,7 +13,7 @@
         <% data.forEach(function(item, index) { %>
             <li>
                 <div id="author">
-                    <a href=""><%=item.id%></a>
+                    <a href="coverage/<%= item.id %>/lcov-report/index.html"><%=item.id%></a>
                     <p><%=item.author.name%></p>
                     <p><%=item.author.email%></p>
                     <p><%=item.message%></p>

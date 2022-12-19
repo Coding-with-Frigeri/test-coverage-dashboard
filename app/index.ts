@@ -58,6 +58,10 @@ const runTestCoverageDashboard = async () => {
       })
 
       fs.writeFileSync('data.json', JSON.stringify(parsedOldData))
+      fs.renameSync(
+        'coverage/lcov-report',
+        `public/coverage/${hash}/lcov-report`
+      )
     }
   } catch (err) {
     core.setFailed((err as { message: string }).message)
