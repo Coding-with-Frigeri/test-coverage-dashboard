@@ -1,6 +1,6 @@
 ul {
     padding-inline-start: 0px;
-    padding: 20px;
+    padding: 20px;    
 }
 
 li {
@@ -10,4 +10,5 @@ li {
     align-items: center;
     padding: 5px;
     border: 1px solid black;
+    margin: 10px 0px;
 }
