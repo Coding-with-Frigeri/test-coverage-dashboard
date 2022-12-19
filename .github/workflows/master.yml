@@ -2,7 +2,6 @@ on:
   push:
     branches:
       - master
-      - charts_display
 
 jobs:
   test_coverage_job:
