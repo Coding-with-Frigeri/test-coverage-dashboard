@@ -58,6 +58,7 @@ const runTestCoverageDashboard = async () => {
       })
 
       fs.writeFileSync('data.json', JSON.stringify(parsedOldData))
+      fs.mkdirSync(`public/coverage/${hash}`, { recursive: true })
       fs.renameSync(
         'coverage/lcov-report',
         `public/coverage/${hash}/lcov-report`
