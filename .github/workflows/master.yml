@@ -35,6 +35,7 @@ jobs:
           add: '.'
           message: 'merge: update data.json and coverage files by overwriting it'
   generate_html_job:
+    needs: test_coverage_job
     if: ${{ !contains(github.event.head_commit.message, 'merge:') }}
     runs-on: ubuntu-latest
     name: A job to generate the HTML for display
