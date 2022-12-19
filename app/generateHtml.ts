@@ -6,6 +6,8 @@ const generateHtml = async () => {
   const data = fs.readFileSync('data.json', 'utf-8')
   const parsedData: Data[] = JSON.parse(data)
 
+  console.log(parsedData)
+
   const html = await ejs.renderFile('./public/ejs/list/index.ejs', {
     data: parsedData,
   })
