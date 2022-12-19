@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - master
+      - charts_display
 
 jobs:
   hello_world_job:
