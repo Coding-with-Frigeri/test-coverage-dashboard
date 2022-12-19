@@ -3,4 +3,4 @@ author: "Bruno Frigeri"
 description: 'Start generating the HTML for displaying the data gathered'
 runs:
   using: 'node16'
-  main: 'dist/app/generateHtml.js'
+  main: '../dist/app/generateHtml.js'
