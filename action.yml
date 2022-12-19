@@ -1,6 +1,6 @@
-name: 'Hello World'
+name: 'Test Coverage Dashboard'
 author: "Bruno Frigeri"
-description: 'Greet someone and record the time'
+description: 'Start running Test Coverage Dashboard generation script'
 runs:
   using: 'node16'
   main: 'dist/app/index.js'

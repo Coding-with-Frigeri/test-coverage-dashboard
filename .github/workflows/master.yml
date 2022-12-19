@@ -4,10 +4,10 @@ on:
       - master
 
 jobs:
-  hello_world_job:
+  test_coverage_job:
     if: ${{ !contains(github.event.head_commit.message, 'merge:') }}
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job to generate the Coverage data and update the JSON file
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -31,5 +31,35 @@ jobs:
       - name: Adding a new file for testing purposes
         uses: EndBug/add-and-commit@v9
         with:
-          add: './data.json'
-          message: 'merge: update data.json file by overwriting it'
+          add: '.'
+          message: 'merge: update data.json and coverage files by overwriting it'
+  generate_html_job:
+    needs: test_coverage_job
+    if: ${{ !contains(github.event.head_commit.message, 'merge:') }}
+    runs-on: ubuntu-latest
+    name: A job to generate the HTML for display
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: 'npm'
+          cache-dependency-path: package-lock.json
+      - name: Install Dependencies
+        run: npm i
+      - name: Build
+        run: npm run build
+      - name: Run Test Coverage
+        run: npm run test
+      - name: Try to run action.yml
+        id: run
+        uses: ./generateHtmlAction
+      - name: Adding a new file for testing purposes
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: '.'
+          message: 'merge: update project with the public folder'
